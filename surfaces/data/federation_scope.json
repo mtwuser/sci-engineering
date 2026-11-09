@@ -1,0 +1,50 @@
+{
+  "scope": "federation",
+  "layer_id": "sci-engineering",
+  "visibility": "public",
+  "target_environments": [
+    "pro"
+  ],
+  "intranet_topology": {
+    "base_domain": "sci-engineering.knowledge.local",
+    "node_host": "sci-engineering.knowledge.local",
+    "port": 8720,
+    "promotion_pipeline": "staged",
+    "visibility": "public",
+    "environment_promotion_order": [
+      "dev",
+      "tst",
+      "pre",
+      "pro"
+    ],
+    "environment_subdomains": {
+      "dev": "https://dev.sci-engineering.knowledge.local",
+      "tst": "https://tst.sci-engineering.knowledge.local",
+      "pre": "https://pre.sci-engineering.knowledge.local",
+      "pro": "https://sci-engineering.knowledge.local"
+    },
+    "local_environment_urls": {
+      "dev": "http://127.0.0.1:8720/?env=dev",
+      "tst": "http://127.0.0.1:8720/?env=tst",
+      "pre": "http://127.0.0.1:8720/?env=pre",
+      "pro": "http://127.0.0.1:8720/?env=pro"
+    },
+    "environment_reachability": {
+      "dev": "local-loopback-only",
+      "tst": "local-preview-unprovisioned-intranet",
+      "pre": "local-preview-unprovisioned-intranet",
+      "pro": "public-remote-live"
+    },
+    "remote_production_url": "https://github.com/mtwuser/sci-engineering.git",
+    "active_subdomain_url": "https://dev.sci-engineering.knowledge.local",
+    "localhost_url": "http://127.0.0.1:8720/?env=dev"
+  },
+  "mounted_layers": [],
+  "fleet_plugin_inventory": [],
+  "cloud_iac_target": {
+    "provider": "google-cloud-iac",
+    "environment": "dev",
+    "stage": "local-cockpit",
+    "iac_manifest": "surfaces/infra/cloud_deployment.json"
+  }
+}

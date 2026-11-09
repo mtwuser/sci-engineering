@@ -1,0 +1,13 @@
+{
+  "schema_version": "zcg-template-v1",
+  "name": "scientific-methodology",
+  "kind": "context-stack",
+  "stack_group": "context-stack",
+  "extends": "science-base",
+  "target_role": "department",
+  "description": "Falsifiable hypothesis protocols, reproducible datasets, SI uncertainty bounds, and corpus curation.",
+  "recommended_surface_bindings": [],
+  "reconciled_upstream_sha256": {
+    "scientific-methodology.md": "c83b9d0fc1aadec3735201dfb3048afaccb5fa662996abe974925017adf67ad7"
+  }
+}

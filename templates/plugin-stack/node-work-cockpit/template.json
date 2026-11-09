@@ -1,0 +1,22 @@
+{
+  "schema_version": "zcg-template-v1",
+  "name": "node-work-cockpit",
+  "kind": "plugin-stack",
+  "stack_group": "plugin-stack",
+  "extends": "universal-base",
+  "target_role": "squad",
+  "description": "Department & Squad Node Work & Sprint Ledger and Epistemic Spec Atlas cockpit.",
+  "runtime_service": {
+    "service_id": "node-work-cockpit",
+    "framework": "zero-build-html-cockpit",
+    "bound_surfaces": [
+      "surfaces/web/",
+      "surfaces/data/"
+    ],
+    "healthcheck_endpoint": "/healthz"
+  },
+  "recommended_surface_bindings": [],
+  "reconciled_upstream_sha256": {
+    "node-work-cockpit.md": "c7055e57176e2e95ea4b5d760a9c7c7880fd6b19fc727d99bcaf11079376317e"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "zcg-template-v1",
+  "template_id": "sci-engineering",
+  "kind": "context-stack",
+  "target_role": "domain-policy",
+  "description": "Applied Engineering Sciences Corpus (Materials Metallurgy, Unit Operations, Control & SHM Standards)",
+  "recommended_surface_bindings": [
+    {
+      "binding_id": "sci-engineering-surface-binding",
+      "description": "Applied Engineering Sciences Corpus (Materials Metallurgy, Unit Operations, Control & SHM Standards)",
+      "mode": "authoritative",
+      "target_globs": [
+        "*"
+      ],
+      "architectural_planes": [
+        "*"
+      ],
+      "scopes": [
+        "*"
+      ],
+      "traits": [
+        "*"
+      ],
+      "default_resolution": "L2",
+      "invariants": [
+        "Enforce sci-engineering (context-stack) rules and canonical assets"
+      ],
+      "rule_files": [
+        "templates/sci-engineering/rules/sci-engineering.md"
+      ],
+      "canonical_templates": [
+        "templates/sci-engineering/skills/sci-engineering-guide/SKILL.md",
+        "templates/sci-engineering/assets/canonical_snippet.md"
+      ],
+      "ephemeral_fork_policy": {
+        "bot_role": "sci-engineering-guardian",
+        "trigger": "on_surface_match",
+        "model_tier": "inherit",
+        "access_mode": "strictly-read-only",
+        "mount_templates": [
+          "sci-engineering"
+        ],
+        "resolution": "L2",
+        "ttl_seconds": 300,
+        "handback_contract": "4-channel-digest+rcap1"
+      }
+    }
+  ],
+  "stack_group": "context-stack",
+  "extends": "scientific-methodology"
+}

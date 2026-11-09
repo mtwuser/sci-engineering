@@ -1,0 +1,68 @@
+{
+  "scope": "node",
+  "layer_id": "sci-engineering",
+  "target_environments": [
+    "dev"
+  ],
+  "representation_context": {
+    "view_archetype": "knowledge-stewardship-portal",
+    "active_templates": [
+      "universal-base",
+      "science-base",
+      "scientific-methodology",
+      "sci-engineering",
+      "node-work-cockpit"
+    ],
+    "public_node_identity": {
+      "node_id": "sci-engineering",
+      "display_name": "Applied Engineering Sciences Corpus (Materials Metallurgy, Unit Operations, Control & SHM Standards)",
+      "canonical_domain": "sci-engineering.knowledge.local",
+      "public_url": "https://github.com/mtwuser/sci-engineering.git",
+      "governing_root_id": "sci-engineering",
+      "root_0_public_approved": true,
+      "bridge_mode": "canonical-public-knowledge",
+      "attestation_digest": "626d8cf0a2606349",
+      "recognizable_in_network": true
+    },
+    "workstation_config": null,
+    "academic_study_state": null
+  },
+  "own_node_ledger": {
+    "trackers": {
+      "WORKROAD.md": {
+        "exists": true,
+        "open": 0,
+        "in_progress": 0,
+        "completed": 1
+      },
+      "WORKTASK.md": {
+        "exists": true,
+        "open": 0,
+        "in_progress": 0,
+        "completed": 1
+      },
+      "WORKVALI.md": {
+        "exists": false,
+        "open": 0,
+        "in_progress": 0,
+        "completed": 0
+      },
+      "BACKLOG.md": {
+        "exists": true,
+        "open": 1,
+        "in_progress": 0,
+        "completed": 0
+      }
+    },
+    "total_open_items": 1,
+    "total_in_progress_items": 0,
+    "total_completed_items": 2,
+    "active_node_tasks": []
+  },
+  "knowledge_docs": [
+    "docs/README.md",
+    "docs/architecture/01_engineering_disciplines_and_systems_taxonomy.md",
+    "docs/guides/01_applied_engineering_design_and_verification_guide.md",
+    "docs/reference/01_materials_metallurgy_unit_operations_and_shm_standards.md"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "scope": "network",
+  "layer_id": "sci-engineering",
+  "governing_root_id": "sci-engineering",
+  "target_environments": [
+    "tst",
+    "pre"
+  ],
+  "network_representation_links": {
+    "parent_home_node": null,
+    "downward_child_nodes": [],
+    "lateral_peer_nodes": []
+  },
+  "inter_layer_exchange": {
+    "scope_boundary": "public-surface",
+    "inbound_directives": [],
+    "inbound_proposals": [],
+    "outbound_deliverables": []
+  },
+  "environment_gates": {
+    "dev": {
+      "allowed": true,
+      "failed_gates": []
+    },
+    "tst": {
+      "allowed": true,
+      "failed_gates": []
+    },
+    "pre": {
+      "allowed": true,
+      "failed_gates": []
+    },
+    "pro": {
+      "allowed": false,
+      "failed_gates": [
+        "UNAUTHORIZED_PRO_RELEASE: Actor '<unset>' is not owner."
+      ]
+    }
+  }
+}

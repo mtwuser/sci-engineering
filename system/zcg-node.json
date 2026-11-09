@@ -1,0 +1,121 @@
+{
+  "schema_version": "zcg-node-v1",
+  "layer_id": "sci-engineering",
+  "layer_role": "knowledge",
+  "precedence": 20,
+  "entity_kind": "open-source",
+  "governing_root_id": "sci-engineering",
+  "visibility": "public",
+  "stewardship_stage": "public-community",
+  "public_url": "https://github.com/mtwuser/sci-engineering.git",
+  "canonical_authority_url": "https://github.com/consortium-sci/sci-engineering.git",
+  "description": "Applied Engineering Sciences Corpus (Materials Metallurgy, Unit Operations, Control & SHM Standards)",
+  "upstream_layer": {
+    "layer_id": "mtwuser/zero-cloud-gravity",
+    "repository": "https://github.com/mtwuser/zero-cloud-gravity.git",
+    "branch": "master"
+  },
+  "mounted_layers_dir": "layers",
+  "mounted_layers": [],
+  "default_stack_templates": [
+    "science-base",
+    "scientific-methodology",
+    "sci-engineering",
+    "node-work-cockpit"
+  ],
+  "baseline_guardrails": [
+    "Enforce sci-engineering E3..E1 primary-source citation_receipt integrity"
+  ],
+  "surface_bindings": [
+    {
+      "binding_id": "sci-engineering-surface-binding",
+      "description": "Applied Engineering Sciences Corpus (Materials Metallurgy, Unit Operations, Control & SHM Standards)",
+      "mode": "authoritative",
+      "target_globs": [
+        "*"
+      ],
+      "architectural_planes": [
+        "*"
+      ],
+      "scopes": [
+        "*"
+      ],
+      "traits": [
+        "*"
+      ],
+      "default_resolution": "L2",
+      "invariants": [
+        "Enforce sci-engineering (context-stack) rules and canonical assets"
+      ],
+      "rule_files": [
+        "templates/sci-engineering/rules/sci-engineering.md"
+      ],
+      "canonical_templates": [
+        "templates/sci-engineering/skills/sci-engineering-guide/SKILL.md",
+        "templates/sci-engineering/assets/canonical_snippet.md"
+      ],
+      "ephemeral_fork_policy": {
+        "bot_role": "sci-engineering-guardian",
+        "trigger": "on_surface_match",
+        "model_tier": "inherit",
+        "access_mode": "strictly-read-only",
+        "mount_templates": [
+          "sci-engineering"
+        ],
+        "resolution": "L2",
+        "ttl_seconds": 300,
+        "handback_contract": "4-channel-digest+rcap1"
+      }
+    }
+  ],
+  "environments": {
+    "dev": {
+      "description": "Local sci-engineering curation workspace",
+      "access_mode": "read-write-local",
+      "default_guardrails": [
+        "Verify sci-engineering primary citations"
+      ]
+    },
+    "tst": {
+      "description": "Validation environment for sci-engineering",
+      "access_mode": "read-and-test-trigger",
+      "default_guardrails": [
+        "Verify sci-engineering rcap1 capsules"
+      ]
+    },
+    "pre": {
+      "description": "Staging audit for sci-engineering",
+      "access_mode": "strictly-read-only",
+      "default_guardrails": [
+        "Audit sci-engineering citation drift"
+      ]
+    },
+    "pro": {
+      "description": "Canonical public corpus for sci-engineering",
+      "access_mode": "strictly-read-only-audited",
+      "default_guardrails": [
+        "Enforce sci-engineering E3..E1 immutability"
+      ]
+    }
+  },
+  "federated_mcps": [],
+  "layer_authority": {
+    "owner_role": "sci-engineering Knowledge Steward",
+    "authorized_emails": [
+      "mtwuser@users.noreply.github.com"
+    ],
+    "escalation_contact": "sci-engineering Knowledge Steward <mtwuser@users.noreply.github.com>",
+    "roster": {
+      "owners": [
+        {
+          "email": "mtwuser@users.noreply.github.com",
+          "title": "sci-engineering Knowledge Steward",
+          "squad": ""
+        }
+      ],
+      "maintainers": [],
+      "validators": [],
+      "members": []
+    }
+  }
+}
