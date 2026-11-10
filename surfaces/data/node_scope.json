@@ -24,6 +24,29 @@
       "attestation_digest": "626d8cf0a2606349",
       "recognizable_in_network": true
     },
+    "delivery_channel": {
+      "protocol": "python314-native-asgi",
+      "zones": [
+        "Z1",
+        "Z2",
+        "Z3",
+        "Z4"
+      ],
+      "tier": "T1",
+      "latency_budget_ms": 200,
+      "http_poll_stop_status": 286
+    },
+    "runtime_telemetry": {
+      "regime": "OPTIMAL",
+      "health_score": 1.0,
+      "telemetry_sink": ".agents/telemetry",
+      "ledger_bridge": "WORKTASK.md"
+    },
+    "dual_world_contract": {
+      "common_base_plugin": "node-work-cockpit",
+      "use_case_overlay": "knowledge-stewardship-portal",
+      "enterprise_scale": null
+    },
     "workstation_config": null,
     "academic_study_state": null
   },

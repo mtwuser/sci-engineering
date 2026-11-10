@@ -73,4 +73,4 @@ Verify these mandates before proposing solutions or modifying files:
 
 ### Priority Chain & Global Config Persistence
 - **Priority Chain**: (0) **In-Flight (3-Path Valve)** $\rightarrow$ (1) `WORKTASK.md` $\rightarrow$ (2) `WORKROAD.md` / `BACKLOG.md` $\rightarrow$ (3) `roadmaps/`.
-- **Global Config & Skills**: `$ZCG_RUNTIME_DIR` (`$HOME/zero-cloud-gravity`); sync via `./install.sh --stow` and promote via `/enrich` $\rightarrow$ `make promote`.
+- **Global Config & Skills**: `$ZCG_RUNTIME_DIR` + `$ZCG_WORKSTATION_DIR` (`~/<user-pc>`); sync via `zcg-sync --sync` and promote via `/enrich` $\rightarrow$ `make promote`.

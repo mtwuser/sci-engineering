@@ -13,7 +13,20 @@
       "surfaces/web/",
       "surfaces/data/"
     ],
-    "healthcheck_endpoint": "/healthz"
+    "healthcheck_endpoint": "/healthz",
+    "delivery_channel": {
+      "protocol": "python314-native-asgi",
+      "zones": [
+        "Z1",
+        "Z2",
+        "Z3",
+        "Z4"
+      ],
+      "default_tier": "T1",
+      "latency_budget_ms": 200,
+      "http_poll_stop_status": 286,
+      "telemetry_sink": ".agents/telemetry"
+    }
   },
   "recommended_surface_bindings": [],
   "reconciled_upstream_sha256": {
