@@ -1,0 +1,32 @@
+{
+  "schema_version": "zcg-dns-zone-v1",
+  "layer_id": "sci-engineering",
+  "local_rfc6761_subdomain": "sci-engineering.localhost",
+  "domain_governance": {
+    "governing_root_id": "sci-engineering",
+    "canonical_domain": "",
+    "intranet_zone": "",
+    "local_dev_zone": "sci-engineering.localhost",
+    "dns_publication": "public-authoritative",
+    "dns_authority": {
+      "governed_by": "sci-engineering",
+      "delegated_operator_layer": "sci-engineering",
+      "required_role": "owner",
+      "provider": "google-cloud-dns"
+    }
+  },
+  "records": [
+    {
+      "type": "A",
+      "name": "sci-engineering.knowledge.local",
+      "target": "127.0.0.1",
+      "scope": "public-authoritative"
+    },
+    {
+      "type": "TXT",
+      "name": "_zcg-attest.sci-engineering.knowledge.local",
+      "value": "v=zcg1; node=sci-engineering; mode=full-open-source",
+      "scope": "public-authoritative"
+    }
+  ]
+}

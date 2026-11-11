@@ -36,15 +36,47 @@
       "pro": "public-remote-live"
     },
     "remote_production_url": "https://github.com/mtwuser/sci-engineering.git",
-    "active_subdomain_url": "https://dev.sci-engineering.knowledge.local",
-    "localhost_url": "http://127.0.0.1:8720/?env=dev"
+    "active_subdomain_url": "https://sci-engineering.knowledge.local",
+    "localhost_url": "http://127.0.0.1:8720/?env=pro",
+    "local_subdomain_host": "sci-engineering.localhost",
+    "local_subdomain_url": "http://sci-engineering.localhost:8720/?env=pro",
+    "local_subdomain_dashboard_url": "http://sci-engineering.localhost:8720/dashboard",
+    "local_subdomain_urls": {
+      "dev": "http://dev.sci-engineering.localhost:8720/?env=dev",
+      "tst": "http://tst.sci-engineering.localhost:8720/?env=tst",
+      "pre": "http://pre.sci-engineering.localhost:8720/?env=pre",
+      "pro": "http://sci-engineering.localhost:8720/?env=pro"
+    },
+    "domain_governance": {
+      "governing_root_id": "sci-engineering",
+      "canonical_domain": "",
+      "intranet_zone": "",
+      "local_dev_zone": "sci-engineering.localhost",
+      "dns_publication": "public-authoritative",
+      "dns_authority": {
+        "governed_by": "sci-engineering",
+        "delegated_operator_layer": "sci-engineering",
+        "required_role": "owner",
+        "provider": "google-cloud-dns"
+      }
+    }
   },
   "mounted_layers": [],
-  "fleet_plugin_inventory": [],
+  "fleet_plugin_inventory": [
+    {
+      "workspace_id": "sci-engineering",
+      "workspace_path": ".",
+      "plugin_id": "knowledge-stewardship-portal",
+      "status": "healthy",
+      "environment": "pro",
+      "daemon_active": false,
+      "localhost_url": "http://sci-engineering.localhost:8720"
+    }
+  ],
   "cloud_iac_target": {
     "provider": "google-cloud-iac",
-    "environment": "dev",
-    "stage": "local-cockpit",
+    "environment": "pro",
+    "stage": "production-cloud-run-gke",
     "iac_manifest": "surfaces/infra/cloud_deployment.json"
   }
 }

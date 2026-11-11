@@ -1,7 +1,0 @@
-{
-  "service_id": "node-work-cockpit",
-  "contract_version": "zcg-service-v1",
-  "bind_host": "127.0.0.1",
-  "data_scopes": ["node", "network"],
-  "surfaces": ["surfaces/web/index.html", "surfaces/data/node_state.json"]
-}

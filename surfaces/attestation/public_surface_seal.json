@@ -1,0 +1,18 @@
+{
+  "schema_version": "zcg-surface-seal-v1",
+  "layer_id": "sci-engineering",
+  "governing_root_id": "sci-engineering",
+  "environment": "pro",
+  "surface_veracity_mode": "full-open-source",
+  "code_exposure_required": true,
+  "canonical_domain": "sci-engineering.knowledge.local",
+  "local_rfc6761_subdomain": "sci-engineering.localhost",
+  "source_repo_url": "https://github.com/mtwuser/sci-engineering",
+  "copyright": "© 2026 sci-engineering",
+  "public_routes_count": 4,
+  "public_routes_digest": "3ac0475c76468a18",
+  "served_assets_count": 3,
+  "served_assets_merkle_root": "f6a73c44742b99ffb1cbdc13c429287f7a70ec7e316d752dd55b8e4db0e2308a",
+  "seal_digest": "2c941500894e1bfa",
+  "verification_endpoint": "/.well-known/zcg-attestation.json"
+}

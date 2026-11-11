@@ -1,1 +1,1 @@
-{"status": "ok", "plugin_id": "node-work-cockpit", "layer_id": "sci-engineering", "environment": "dev", "zones": ["Z1", "Z2", "Z3", "Z4"], "http_poll_stop_status": 286, "health_regime": "OPTIMAL"}
+{"status": "ok", "protocol": "python314-native-asgi", "plugin_id": "knowledge-stewardship-portal", "layer_id": "sci-engineering", "environment": "pro", "delivery_channels_count": 16, "zones": ["Z1", "Z2", "Z3", "Z4"], "http_poll_stop_status": 286, "health_regime": "OPTIMAL"}

@@ -1,31 +1,37 @@
-# sci-engineering (`knowledge`, `precedence: 20`)
+# sci-engineering — Sovereign Epistemic Knowledge Corpus (`v1.0.0`)
 
-## Layer Setup Blueprint (Epistemic Knowledge Atlas Node (gov-*, sci-*, geo-*, org-*))
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](VERSION)
+[![ZeroCloudGravity](https://img.shields.io/badge/ZeroCloudGravity-v1.0.0-0F766E.svg)](https://github.com/mtwuser/zero-cloud-gravity)
+[![Epistemic Grade](https://img.shields.io/badge/epistemic_grade-E3..E1-1D4ED8.svg)](docs/README.md)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-- **Node ID & Role**: `sci-engineering` (`knowledge`, `precedence: 20`)
-- **1-Hop Upstream Parent**: `mtwuser/zero-cloud-gravity`
-- **Active Template Packs**: `science-base`, `scientific-methodology`, `sci-engineering`, `node-work-cockpit`
-- **Branch & Promotion Pipeline (`promotion_pipeline`)**: `staged` (`['dev', 'tst', 'pre', 'pro']` — `master` = enacted `pro` baseline + optional `context_branches` (`specialty/*`, `hat/*`, `machine/*`); work promotes via `feature/*` or `directive/*` (`dev`) -> `env/tst` -> `env/pre` -> `master` (`pro`))
-- **Human-Stack Profile (Optional)**: [Optional: leave blank for default, or compose Human-Stack facets: domain-<area>:M1..M4 | bridge-* | soft-* | hat-*]
-- **Interaction Language (`--lang`)**: `en` (`English (en)` — repo artifacts 100% English)
-- **Mission, Scope & Core Invariants**: [Fill: Epistemic domain, E3..E0 credibility invariants, and citation_receipt scope]
-- **Downstream Topology (Next Tier)**: [Fill: Consumer nodes mounting this knowledge corpus]
-- **Authorized Layer Owner (`set-authority`)**: [Fill: Role title & owner email]
+> **Applied Engineering Sciences Corpus (`EN 10088` Metallurgy, `ISO 3310-1` Unit Operations, `IEC 61508/61511` `SIL` & `ISO 20816-3` SHM)** (`layer_role: knowledge`, `precedence: 20`, `stewardship_stage: public-community`).
 
-## Initial Chat Kickoff Prompt (4-Phase Customizable Progression)
+## 1. Epistemic Corpus Index (`1:1:1` Progressive Disclosure)
 
-```text
-Phase A (Setup & Purpose Alignment): Read the filled Layer Setup Blueprint in README.md, system/zcg-node.json, and .agents/LAYER_LINEAGE.md. Tailor antigravity/.gemini/config/AGENTS.md and templates/sci-engineering/rules/sci-engineering.md with our mission and invariants without duplicating upstream rules, then run make sync && make diff and update the Node Work & Sprint Ledger (WORKROAD.md / WORKTASK.md).
-Phase B (Epistemic Knowledge & Spec Atlas): Structure docs/{reference,architecture,guides}/ (< 465 lines) with E3..E0 epistemic grades and citation_receipt anchors.
-Phase C (Daily Bounded-Lot Execution & Verification): Claim work via make task TASK="<id>", execute 1 bounded lot per turn (3-5 files) with active-layer verification, and checkpoint via /continue.
-Phase D (Upward Enrichment & Sync Reconciliation): Reconcile upstream updates via make sync STRATEGY=reconcile (make upstream-diff), verify make env-gate ENV=tst|pre|pro, and promote reusable rules upward via /enrich and make promote before /sclose.
+All sections expose deterministic `rcap1` (`L0 -> L3`) capsules and cryptographic `citation_receipt` anchors (`<layer>::<file>#<slug>@<sha256_16>:<E3..E0>`):
+
+| Tier | Credibility | Document |
+| :--- | :--- | :--- |
+| **Index** | `E2` | [`docs/README.md`](docs/README.md) |
+| **Guide (`M1 -> M4`)** | `E1` | [Applied Engineering Design, Scaling & AAA Interlock Verification Guide (`M1 -> M4` — `E1`)](docs/guides/01_applied_engineering_design_and_verification_guide.md) |
+| **Architecture & Taxonomy** | `E3` | [Engineering Disciplines, Systems V-Model & Functional Safety Taxonomy (`E3/E2`)](docs/architecture/01_engineering_disciplines_and_systems_taxonomy.md) |
+| **Primary Reference** | `E3/E2` | [Metallurgy, Unit Operations, SHM Vibration & Industrial Instrumentation Standards (`E3/E2`)](docs/reference/01_materials_metallurgy_unit_operations_and_shm_standards.md) |
+
+## 2. Mounting & Querying from Any `ZeroCloudGravity` Node
+
+Link or mount this corpus into a personal (`<persona>-pc`, `<persona>-tutor`), research, or enterprise node without cloud dependencies:
+
+```bash
+zcg link <your-node-dir> --target https://github.com/mtwuser/sci-engineering.git --relation knowledge-feed
+zcg consult-layer <your-node-dir> --layer sci-engineering --query "<topic>" --tier flash
 ```
 
-## Upstream Upgrade & Version Reconciliation Prompt (4-Step Guided Flow)
+## 3. Layer Setup Blueprint (`State U2: configured`)
 
-```text
-Step 1 (Topology & Horizon Audit): /sopen — Run make status (inspect sync_topology 4-stage DAG & promotion_pipeline), make horizon, and make upstream-diff against `mtwuser/zero-cloud-gravity`.
-Step 2 (Zero-Loss Node & Schema Reconciliation): Run make sync STRATEGY=reconcile (or STRATEGY=merge) to upgrade Makefile, system/zcg-node.json, and inherited templates while preserving sovereign rules in templates/sci-engineering/rules/sci-engineering.md.
-Step 3 (Selective Stack & Node Plugin Review): Evaluate whether any newly available context-stack, framework-stack, or plugin-stack pack adds genuine value without saturating context, then verify make diff (0 drift).
-Step 4 (Environment / Mastery Gate & Closure): Validate make env-gate ENV=pro (or ENV=tst|pre|pro on staged enterprise nodes) and close via /sclose.
-```
+- **Node ID & Role**: `sci-engineering` (`knowledge`, `precedence: 20`, `surface_veracity_mode: full-open-source`)
+- **1-Hop Upstream Engine**: [`mtwuser/zero-cloud-gravity`](https://github.com/mtwuser/zero-cloud-gravity)
+- **Active Template Packs**: `science-base`, `scientific-methodology`, `sci-engineering`, `knowledge-stewardship-portal`
+- **Mission, Scope & Core Invariants**: Applied engineering and systems verification corpus (`E3..E1`) covering `ISO/IEC/IEEE 15288` V-model, `EN 10088` stainless metallurgy, `ISO 3310-1` unit operations, `IEC 61508` `SIL`, and `ISO 20816-3` vibration cut-points.
+- **Downstream Topology**: Consumed read-only via `knowledge-feed` links or `layers/*` subtrees across academic, scientific, public-sector, and enterprise nodes.
+- **Authorized Layer Steward**: `sci-engineering Knowledge Steward <mtwuser@users.noreply.github.com>`

@@ -1,6 +1,6 @@
 # Zero-Cloud Node Governance Lineage (`zero-cloud-gravity`)
 
-- **Applied Template Pack**: `science-base,scientific-methodology,sci-engineering,node-work-cockpit`
+- **Applied Template Pack**: `science-base,scientific-methodology,sci-engineering,knowledge-stewardship-portal`
 
 ## Participating Layers (Ordered by Precedence `0..100`)
 
@@ -9,7 +9,7 @@
 | `20` | `root` | `sci-engineering` | `knowledge` | `1` |
 
 ## Project Setup Blueprint (Level 4 — Project & Consumer Workspace)
-- **Applied Template Packs**: `science-base,scientific-methodology,sci-engineering,node-work-cockpit`
+- **Applied Template Packs**: `science-base,scientific-methodology,sci-engineering,knowledge-stewardship-portal`
 - **Branch & Promotion Pipeline (`promotion_pipeline`)**: `staged` (`['dev', 'tst', 'pre', 'pro']` — `master` = enacted `pro` baseline; `dev` is ephemeral `feature/<TICKET>-*` -> `env/tst` -> `env/pre` -> `master` (`pro`))
 - **Human-Stack Profile (Optional)**: [Optional: leave blank for default, or compose Human-Stack facets: domain-<area>:M1..M4 | bridge-* | soft-* | hat-*]
 - **Interaction Language (`--lang`)**: `en` (`English (en)` — repo artifacts 100% English)

@@ -6,7 +6,7 @@ TARGET_REPO ?= $(PARENT_DIR)
 PARENT_FLAG = $(if $(PARENT_DIR),--parent-dir $(PARENT_DIR),)
 PR_FLAGS ?= --create-pr
 
-.PHONY: help status apply-template task complete consult horizon sync upstream-diff diff authority roster env-gate decision promote delegate mcp-test install-plugin uninstall-plugin activate-plugin deactivate-plugin switch-env provision-plugin deploy-plugin restart-plugin healthcheck-plugin teardown-plugin
+.PHONY: help status apply-template task complete consult link unlink horizon sync upstream-diff diff authority roster env-gate decision promote delegate mcp-test install-plugin uninstall-plugin activate-plugin deactivate-plugin switch-env provision-plugin deploy-plugin restart-plugin healthcheck-plugin teardown-plugin
 help:
 	@echo "Zero-Cloud Node: sci-engineering (knowledge)"
 	@echo "  make status"
@@ -14,6 +14,8 @@ help:
 	@echo "  make task"
 	@echo "  make complete"
 	@echo "  make consult"
+	@echo "  make link"
+	@echo "  make unlink"
 	@echo "  make horizon"
 	@echo "  make sync"
 	@echo "  make upstream-diff"
@@ -46,6 +48,10 @@ complete:
 	@$(ZCG_BIN) complete-task $(CURDIR) $(if $(PARENT_SYNC),--parent-dir $(PARENT_DIR),$(PARENT_FLAG)) --task "$(TASK)" $(if $(DELIVERABLE),--deliverable "$(DELIVERABLE)",) $(if $(SUMMARY),--summary "$(SUMMARY)",) $(if $(CREATE_PR),--create-pr,)
 consult:
 	@$(ZCG_BIN) consult-layer $(CURDIR) $(PARENT_FLAG) --layer $(if $(LAYER),$(LAYER),self) --query "$(QUERY)" $(if $(PATH_TARGET),--path $(PATH_TARGET),) $(if $(TIER),--tier $(TIER),)
+link:
+	@$(ZCG_BIN) link $(CURDIR) --target $(TARGET) $(if $(REL),--relation $(REL),) $(if $(REF),--ref $(REF),) $(if $(URL),--url $(URL),) $(if $(PACKS),--packs $(PACKS),)
+unlink:
+	@$(ZCG_BIN) unlink $(CURDIR) --target $(TARGET)
 horizon:
 	@$(ZCG_BIN) inspect-horizon $(CURDIR) $(PARENT_FLAG)
 sync:

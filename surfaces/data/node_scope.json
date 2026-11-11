@@ -11,7 +11,13 @@
       "science-base",
       "scientific-methodology",
       "sci-engineering",
-      "node-work-cockpit"
+      "knowledge-stewardship-portal"
+    ],
+    "enabled_modules": [
+      "data_pipeline",
+      "crud",
+      "vault",
+      "node_mesh"
     ],
     "public_node_identity": {
       "node_id": "sci-engineering",
@@ -32,8 +38,8 @@
         "Z3",
         "Z4"
       ],
-      "tier": "T1",
-      "latency_budget_ms": 200,
+      "tier": "T2",
+      "latency_budget_ms": 1000,
       "http_poll_stop_status": 286
     },
     "runtime_telemetry": {
@@ -43,12 +49,63 @@
       "ledger_bridge": "WORKTASK.md"
     },
     "dual_world_contract": {
-      "common_base_plugin": "node-work-cockpit",
+      "common_base_plugin": "knowledge-stewardship-portal",
       "use_case_overlay": "knowledge-stewardship-portal",
       "enterprise_scale": null
     },
+    "modular_workbench": {
+      "dashboard_id": "knowledge-stewardship-portal",
+      "panel_title": "Epistemic Corpus & Data Pipeline — Capabilities (:8720)",
+      "mode": "knowledge-stewardship-portal",
+      "enabled_modules": [
+        "data_pipeline",
+        "crud",
+        "vault",
+        "node_mesh"
+      ],
+      "modules": [
+        {
+          "module_id": "data_pipeline",
+          "title": "Data Pipeline (CDC/CVS)",
+          "endpoint": "/api/modules/data-pipeline",
+          "actions": [
+            "inspect-pipeline",
+            "ingest-batch"
+          ]
+        },
+        {
+          "module_id": "crud",
+          "title": "Declarative CRUD Collection",
+          "endpoint": "/api/modules/crud",
+          "actions": [
+            "view-cards",
+            "view-list",
+            "view-table",
+            "create-record"
+          ]
+        },
+        {
+          "module_id": "vault",
+          "title": "Content-Addressed Vault",
+          "endpoint": "/api/modules/vault",
+          "actions": [
+            "list-files",
+            "upload-sample"
+          ]
+        },
+        {
+          "module_id": "node_mesh",
+          "title": "1-Hop & Cloud Mesh",
+          "endpoint": "/api/modules/node-mesh",
+          "actions": [
+            "inspect-mesh"
+          ]
+        }
+      ]
+    },
     "workstation_config": null,
-    "academic_study_state": null
+    "academic_study_state": null,
+    "personal_work_state": null
   },
   "own_node_ledger": {
     "trackers": {

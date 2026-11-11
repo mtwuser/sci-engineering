@@ -9,7 +9,8 @@
   "network_representation_links": {
     "parent_home_node": null,
     "downward_child_nodes": [],
-    "lateral_peers": []
+    "lateral_peers": [],
+    "linked_nodes": []
   },
   "inter_layer_exchange": {
     "scope_boundary": "public-surface",

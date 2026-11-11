@@ -21,7 +21,7 @@
     "science-base",
     "scientific-methodology",
     "sci-engineering",
-    "node-work-cockpit"
+    "knowledge-stewardship-portal"
   ],
   "baseline_guardrails": [
     "Enforce sci-engineering E3..E1 primary-source citation_receipt integrity"
@@ -117,5 +117,6 @@
       "validators": [],
       "members": []
     }
-  }
+  },
+  "surface_veracity_mode": "full-open-source"
 }
